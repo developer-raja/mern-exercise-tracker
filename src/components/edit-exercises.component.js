@@ -24,7 +24,7 @@ export default class EditExercise extends Component{
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)
+        axios.get('https://mern-exercise-backend.herokuapp.com/exercises/'+this.props.match.params.id)
         .then(response => {
             this.setState({
                 username:response.data.username,
